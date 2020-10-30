@@ -58,6 +58,48 @@ pageClass: routes
 
 <Route author="nczitzk" example="/fgo/news" path="/fgo/news"/>
 
+## GameRes 游资网
+
+### 热点推荐
+
+<Route author="nczitzk" example="/gameres/hot" path="/gameres/hot"/>
+
+### 列表
+
+<Route author="nczitzk" example="/gameres/list/26" path="/gameres/list/:id" :paramsDesc="['列表 id']">
+
+产业
+
+| 厂商・专访 | 观察・投资 | 产品 | 政策 | 电子竞技 | 直播 | 区块链 |
+| ---------- | ---------- | ---- | ---- | -------- | ---- | ------ |
+| 1          | 11         | 6    | 45   | 14       | 42   | 41     |
+
+平台
+
+| 手游 | 页游・H5 | 端游・PC | 主机 | 虚拟・VR・AR | 云游戏 |
+| ---- | -------- | -------- | ---- | ------------ | ------ |
+| 5    | 17       | 18       | 21   | 16           | 48     |
+
+研发
+
+| 拆解分析 | 策划 | 程序・引擎 | 美术 | 音乐 | 测试 |
+| -------- | ---- | ---------- | ---- | ---- | ---- |
+| 24       | 25   | 26         | 27   | 28   | 29   |
+
+市场
+
+| 职场・创业 | 运营・渠道 | 海外 | 数据・报告 | App Store | Steam |
+| ---------- | ---------- | ---- | ---------- | --------- | ----- |
+| 38         | 34         | 47   | 33         | 46        | 40    |
+
+其他
+
+| 原创 | 硬件・周边 | 八卦 | 活动 | 综合 |
+| ---- | ---------- | ---- | ---- | ---- |
+| 43   | 44         | 15   | 22   | 39   |
+
+</Route>
+
 ## GNN.tw 游戏新闻
 
 ### GNN.tw 游戏新闻
@@ -69,6 +111,12 @@ pageClass: routes
 ### indienova 文章
 
 <Route author="GensouSakuya kt286" example="/indienova/article" path="indienova/:type" :paramsDesc="['类型: `article` 文章，`development` 开发']"/>
+
+## Liquipedia
+
+### Dota2 战队最近比赛结果
+
+<Route author="wzekin" example="/liquipedia/dota2/matches/Team_Aster" path="liquipedia/dota2/matches/:id" :paramsDesc="['战队名称，可在url中找到。例如:https://liquipedia.net/dota2/Team_Aster']"/>
 
 ## Maxjia News
 
