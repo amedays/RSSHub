@@ -34,6 +34,30 @@ pageClass: routes
 
 <RouteEn author="maple3142" example="/facebook/page/SonetPCR" path="/facebook/page/:id" :paramsDesc="['page id']" anticrawler="1"/>
 
+## Gab
+
+### User's Posts
+
+<RouteEn author="zphw" example="/gab/user/realdonaldtrump" path="/gab/user/:username" :paramsDesc="['Username']" />
+
+### Popular Posts
+
+<RouteEn author="zphw" example="/gab/popular/hot" path="/gab/popular/:sort?" :paramsDesc="['Sort by, `hot` to be Hot Posts and `top` to be Top Posts. Default: hot']" />
+
+## Instagram
+
+::: warning
+
+Due to Instagram API restrictions, you have to setup your credentials on the server. See deployment guide for more.
+
+If you don't want to setup credentials, use Picuki.
+
+:::
+
+### User Profile
+
+<RouteEn author="oppilate DIYgod" example="/instagram/user/stefaniejoosten" path="/instagram/:category/:key" :paramsDesc="['Feed category. Only user category is supported for now.','Key for such category. E.g. username/ID for user feed']" radar="1" anticrawler="1"/>
+
 ## Lofter
 
 ### User
@@ -87,7 +111,7 @@ These feed do not include boosts (a.k.a. reblogs). RSSHub provides a feed for us
 
 ### User Profile
 
-<Route author="hoilc" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id/:displayVideo?" :paramsDesc="['Instagram id','Default to disable the embedded video, set to any value to enable embedding']" />
+<RouteEn author="hoilc" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id/:displayVideo?" :paramsDesc="['Instagram id','Default to disable the embedded video, set to any value to enable embedding']" />
 
 ## pixiv
 
@@ -119,7 +143,7 @@ These feed do not include boosts (a.k.a. reblogs). RSSHub provides a feed for us
 
 ### Following timeline
 
-<RouteEn author="ClarkeCheng" example="/pixiv/user/illustfollows" path="/pixiv/user/illustfollows" radar="1" rssbud="1"/>
+<RouteEn author="ClarkeCheng" example="/pixiv/user/illustfollows" path="/pixiv/user/illustfollows" radar="1" rssbud="1" selfhost="1"/>
 ::: warning
 
 Only for self-hosted
@@ -200,11 +224,11 @@ generates
 
 ## User following timeline
 
-<RouteEn author="DIYgod" example="/twitter/followings/DIYgod" path="/twitter/followings/:id/:routeParams?" :paramsDesc="['user id', 'extra parameters, see the table above']" radar="1" rssbud="1">
+<RouteEn author="DIYgod" example="/twitter/followings/DIYgod" path="/twitter/followings/:id/:routeParams?" :paramsDesc="['user id', 'extra parameters, see the table above']" radar="1" rssbud="1" selfhost="1">
 
 ::: warning
 
-This route requires Twitter token's corresponding id, therefore it's only availble when self-hosting, refer to the [Deploy Guide](/en/install/#route-specific-configurations) for route-specific configurations.
+This route requires Twitter token's corresponding id, therefore it's only available when self-hosting, refer to the [Deploy Guide](/en/install/#route-specific-configurations) for route-specific configurations.
 
 :::
 

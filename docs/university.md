@@ -28,6 +28,12 @@ pageClass: routes
 
 <Route author="exuanbo" example="/polimi/news" path="/polimi/news/:language?" :paramsDesc="['English language code en']" />
 
+## UTDallas
+
+### International Student Services
+
+<Route author="Chang4Tech" example="/utdallas/isso" path="/utdallas/isso" />
+
 ## 安徽工业大学
 
 ### 教务处
@@ -226,7 +232,7 @@ pageClass: routes
 
 ### BTBYR 趣味盒
 
-<Route author="prnake" example="/bupt/funbox" path="/bupt/funbox" />
+<Route author="prnake" example="/bupt/funbox" path="/bupt/funbox" selfhost="1"/>
 ::: warning 注意
 
 由于需要登陆 BTBYR 后的 Cookie 值，所以只能自建，并且部署和订阅端均需支持 IPV6 网络或使用镜像站点。
@@ -386,6 +392,14 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 
 </Route>
 
+### 研究生院
+
+<Route author="huyyi" example="/uestc/gr" path="/uestc/gr" />
+
+### 信息与通信工程学院
+
+<Route author="huyyi" example="/uestc/sice" path="/uestc/sice" />
+
 ## 东北大学
 
 ### 东北大学新闻网
@@ -439,6 +453,12 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 | xyxw     | tzgg     | jwxx     | jyxx     | xgsw     |
 
 </Route>
+
+## 复旦大学继续教育学院
+
+### 成人夜大通知公告
+
+<Route author="mrbruce516" example="/fudan/cce" path="/fudan/cce" />
 
 ## 福州大学
 
@@ -843,6 +863,8 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 | -------- | -------- |
 | tt       | yw       |
 
+</Route>
+
 ### 暨南大学校园时讯
 
 <Route author="hang333" example="/jnu/xysx/yxsd" path="/jnu/xysx/:type" :paramDesc="['校园时讯类型']">
@@ -850,6 +872,8 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 | 院系速递 | 部门快讯 |
 | -------- | -------- |
 | yxsd     | bmkx     |
+
+</Route>
 
 ## 江南大学
 
@@ -1608,6 +1632,19 @@ type 列表：
 
 </Route>
 
+## 武汉纺织大学
+
+### 信息门户公告
+
+<Route author="Loyio" example="/wtu/2" path="/wtu/:type"
+:paramsDesc="['公告类型, 详见表格']">
+
+| 公告类型 | 通知公告 | 教务信息 | 科研动态 |
+| -------- | -------- | -------- | -------- |
+| 参数     | 1        | 2        | 3        |
+
+</Route>
+
 ## 西安电子科技大学
 
 ### 教务处
@@ -1706,6 +1743,20 @@ type 列表：
 | 新闻动态 | 学术动态 | 通知公告 | 教研动态 |
 | -------- | -------- | -------- | -------- |
 | 1        | 2        | 3        | 4        |
+
+</Route>
+
+## 信阳师范学院
+
+### 高等教育自学考试办公室
+
+<Route author="VxRain" example="/xynu/zkb/zkzx" path="/xynu/zkb/:category" :paramsDesc="['分类ID']">
+
+分类 ID（如果请求的分类 ID 在不存在下表中，默认请求`zkzx`）
+
+| 主考专业 | 规章制度 | 实践课程 | 毕业论文 | 学士学位 | 自考毕业 | 自考教材 | 自考指南 | 联系我们 | 自考资讯 | 报名指南 | 日程安排 | 新生入门 | 转考免考 | 复习资料 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| zkzy     | gzzd     | sjkc     | bylw     | xsxw     | zkby     | zkjc     | zkzn     | lxwm     | zkzx     | bmzn     | rcap     | xsrm     | zkmk     | fxzl     |
 
 </Route>
 
@@ -1930,6 +1981,10 @@ type 列表：
 
 ## 中国地质大学 (武汉)
 
+### 今日文章 - 包含全校网站最新通知
+
+<Route author="Dorad" example="/cug/news" path="/cug/news" />
+
 ### 研究生院综合通知公告
 
 <Route author="sanmmm" example="/cug/graduate" path="/cug/graduate" />
@@ -1941,6 +1996,14 @@ type 列表：
 ### 地理与信息工程学院综合通知公告
 
 <Route author="chunibyo-wly" example="/cug/xgxy" path="/cug/xgxy" />
+
+### 工程学院
+
+<Route author="Dorad" example="/cug/gcxy/1" path="/cug/gcxy/:type" />
+
+| 所有 | 学院新闻 | 通知公告 | 党建工作 | 学术动态 | 本科生教育 | 研究生教育 | 教工之家 |
+| ---- | -------- | -------- | -------- | -------- | ---------- | ---------- | -------- |
+| 0    | 1        | 2        | 3        | 4        | 5          | 6          | 7        |
 
 ## 中国海洋大学
 
@@ -1972,6 +2035,8 @@ type 列表：
 | ------ | ------ | ------ | ------ |
 | jx     | ky     | gl     | fw     |
 
+</Route>
+
 ### 教务处通知新闻
 
 <Route author="hang333" example="/ustc/jwc/info" path="/ustc/jwc/:type?" :paramsDesc="['可选，默认显示所有种类']">
@@ -1979,6 +2044,8 @@ type 列表：
 | 信息 | 教学     | 考试 | 交流     |
 | ---- | -------- | ---- | -------- |
 | info | teaching | exam | exchange |
+
+</Route>
 
 ## 中国科学院
 
@@ -2137,6 +2204,28 @@ type 列表：
 | 本馆公告 |
 | -------- |
 | news     |
+
+</Route>
+
+## 重庆理工大学
+
+### 学校通知
+
+<Route author="Colin-XKL" example="/cqut/news" path="/cqut/news" radar="1"/>
+
+### 图书馆通知
+
+<Route author="Colin-XKL" example="/cqut/libnews" path="/cqut/libnews" radar="1"/>
+
+## 重庆文理学院
+
+### 通知公告
+
+<Route author="Fatpandac" example="/cqwu/news/academiceve" path="/cqwu/news/:type?" :paramsDesc="['可选，默认为 academiceve ']" radar="1">
+
+| 通知公告 | 学术活动公告 |
+| -------- | ------------ |
+| notify   | academiceve  |
 
 </Route>
 
