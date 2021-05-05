@@ -330,7 +330,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 主页
 
-<Route author="TigerCubDen" example="/furaffinity/home" path="/furaffinity/:type?/:nsfw?" :paramsDesc="['类型，默认为 `artwork`', 'NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1">
+<Route author="TigerCubDen" example="/furaffinity/home" path="/furaffinity/home/:type?/:nsfw?" :paramsDesc="['类型，默认为 `artwork`', 'NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1">
 
 类型 type
 
@@ -342,7 +342,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 浏览
 
-<Route author="TigerCubDen" example="/furaffinity/browse" path="/furaffinity/:nsfw?" :paramsDesc="['NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1"/>
+<Route author="TigerCubDen" example="/furaffinity/browse" path="/furaffinity/browse/:nsfw?" :paramsDesc="['NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1"/>
 
 ### 站点状态
 
@@ -350,7 +350,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 搜索
 
-<Route author="TigerCubDen" example="/furaffinity/search/tiger" path="/furaffinity/:keyword/:nsfw?" :paramsDesc="['搜索关键词，仅限英文搜索', 'NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1"/>
+<Route author="TigerCubDen" example="/furaffinity/search/tiger" path="/furaffinity/search/:keyword/:nsfw?" :paramsDesc="['搜索关键词，仅限英文搜索', 'NSFW开关, 当值为 `1` 时不过滤NSFW内容']" radar="1"/>
 
 ### 用户主页简介
 
@@ -374,7 +374,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 用户的日记
 
-<Route author="TigerCubDen" example="/furaffinity/journals/rukis" path="/furaffinity/shouts/:username" :paramsDesc="['用户名, 可在用户主页的链接处找到']" radar="1"/>
+<Route author="TigerCubDen" example="/furaffinity/journals/rukis" path="/furaffinity/journals/:username" :paramsDesc="['用户名, 可在用户主页的链接处找到']" radar="1"/>
 
 ### 用户的创作画廊
 
@@ -598,7 +598,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 | showQuotedAuthorAvatarInDesc | 是否在正文处显示被转推的推文的作者头像（若阅读器会提取正文图片，不建议开启） | 0/1/true/false | false                                    |
 | showAuthorAvatarInDesc       | 是否在正文处显示作者头像（若阅读器会提取正文图片，不建议开启）               | 0/1/true/false | false                                    |
 | showEmojiForRetweetAndReply  | 显示 “🔁” 取代 “Rt”、“↩️” 取代 “Re”                                          | 0/1/true/false | false                                    |
-| showRetweetTextInTitle       | 在标题出显示转推评论（置为 false 则在标题只显示被转推推文）                  | 0/1/true/false | true                                     |
+| showRetweetTextInTitle       | 在标题处显示转推评论（置为 false 则在标题只显示被转推推文）                  | 0/1/true/false | true                                     |
 | addLinkForPics               | 为图片添加可点击的链接                                                       | 0/1/true/false | false                                    |
 | showTimestampInDescription   | 在正文处显示推特的时间戳                                                     | 0/1/true/false | false                                    |
 | showQuotedInTitle            | 在标题处显示被引用的推文                                                     | 0/1/true/false | false                                    |
@@ -770,7 +770,7 @@ YouTube 官方亦有提供频道 RSS，形如 <https://www.youtube.com/feeds/vid
 
 ### 豆瓣小组
 
-<Route author="DIYgod" example="/douban/group/camera" path="/douban/group/:groupid" :paramsDesc="['豆瓣小组的 id']"/>
+<Route author="DIYgod" example="/douban/group/648102" path="/douban/group/:groupid/:type?" :paramsDesc="['豆瓣小组的 id', '缺省 最新，essence 最热，elite 精华']"/>
 
 ### 浏览发现
 

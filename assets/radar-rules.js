@@ -387,6 +387,12 @@
                 source: '/pub/weekly',
                 target: '/zhihu/weekly',
             },
+            {
+                title: '专栏',
+                docs: 'https://docs.rsshub.app/social-media.html#zhi-hu',
+                source: '/column/:id',
+                target: '/zhihu/zhuanlan/:id',
+            },
         ],
         zhuanlan: [
             {
@@ -1798,12 +1804,6 @@
                 target: '/matters/latest',
             },
             {
-                title: '熱門文章',
-                docs: 'https://docs.rsshub.app/new-media.html#matters',
-                source: '',
-                target: '/matters/hot',
-            },
-            {
                 title: '标签',
                 docs: 'https://docs.rsshub.app/new-media.html#matters',
                 source: '/tags/:tid',
@@ -1920,7 +1920,7 @@
                 title: '用户作品',
                 docs: 'https://docs.rsshub.app/design.html#zhan-ku',
                 source: ['/u/:id'],
-                target: `/zcoo/user/:id`,
+                target: `/zcool/user/:id`,
             },
         ],
     },
@@ -2385,6 +2385,24 @@
                     return uid ? `/douban/people/${uid}/status` : '';
                 },
             },
+            {
+                title: '小组-最新',
+                docs: 'https://docs.rsshub.app/social-media.html#dou-ban',
+                source: '/group/:groupid',
+                target: '/douban/group/:groupid',
+            },
+            {
+                title: '小组-最热',
+                docs: 'https://docs.rsshub.app/social-media.html#dou-ban',
+                source: '/group/:groupid',
+                target: '/douban/group/:groupid/essence',
+            },
+            {
+                title: '小组-精华',
+                docs: 'https://docs.rsshub.app/social-media.html#dou-ban',
+                source: '/group/:groupid',
+                target: '/douban/group/:groupid/elite',
+            },
         ],
     },
     'okjike.com': {
@@ -2731,6 +2749,17 @@
             },
         ],
     },
+    'trakt.tv': {
+        _name: 'Trakt.tv',
+        '.': [
+            {
+                title: '用户收藏',
+                docs: 'https://docs.rsshub.app/multimedia.html#trakt-tv-yong-hu-shou-cang',
+                source: ['/users/:username/collection/:type/added', '/users/:username/collection'],
+                target: (params) => `/trakt/collection/${params.username}/${params.type || 'all'}`,
+            },
+        ],
+    },
     'eagle.cool': {
         _name: 'Eagle',
         cn: [
@@ -2855,6 +2884,94 @@
                 docs: 'https://docs.rsshub.app/social-media.html#fur-affinity',
                 source: '/journal/:id/',
                 target: '/furaffinity/journal_comments/:id',
+            },
+        ],
+    },
+    'gcores.com': {
+        _name: '机核网',
+        www: [
+            {
+                title: '资讯',
+                docs: 'https://docs.rsshub.app/program-update.html#eagle',
+                source: '/news',
+                target: '/gcores/category/news',
+            },
+            {
+                title: '视频',
+                docs: 'https://docs.rsshub.app/program-update.html#eagle',
+                source: '/videos',
+                target: '/gcores/category/videos',
+            },
+            {
+                title: '电台',
+                docs: 'https://docs.rsshub.app/program-update.html#eagle',
+                source: '/radios',
+                target: '/gcores/category/radios',
+            },
+            {
+                title: '文章',
+                docs: 'https://docs.rsshub.app/program-update.html#eagle',
+                source: '/articles',
+                target: '/gcores/category/articles',
+            },
+        ],
+    },
+    'bgm.tv': {
+        _name: 'Bangumi',
+        '.': [
+            {
+                title: '小组话题',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/group/:id',
+                target: '/bangumi/group/:id',
+            },
+            {
+                title: '小组话题的新回复',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/group/topic/:id',
+                target: '/bangumi/topic/:id',
+            },
+            {
+                title: '现实人物的新作品',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/person/:id',
+                target: '/bangumi/person/:id',
+            },
+            {
+                title: '用户日志',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/user/:id',
+                target: '/bangumi/user/blog/:id',
+            },
+            {
+                title: '条目的讨论',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/subject/:id',
+                target: '/bangumi/subject/:id/topics',
+            },
+            {
+                title: '条目的评论',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/subject/:id',
+                target: '/bangumi/subject/:id/blogs',
+            },
+            {
+                title: '条目的章节',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/subject/:id',
+                target: '/bangumi/subject/:id',
+            },
+            {
+                title: '条目的吐槽箱',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/subject/:id',
+                target: '/bangumi/subject/:id/comments',
+            },
+            {
+                title: '放送列表',
+                docs: 'https://docs.rsshub.app/anime.html#bangumi',
+                source: '/calendar',
+                target: '/bangumi/calendar/today',
             },
         ],
     },
